@@ -3,7 +3,7 @@ import numpy as np
 from pyquaternion import Quaternion
 
 
-Vector = Union[list[float], list[int], np.ndarray]
+Vector = Union[List[float], List[int], np.ndarray]
 
 
 def to_numpy(l: Vector) -> np.ndarray:

@@ -2,13 +2,14 @@ import numpy as np
 import open3d as o3d
 import matplotlib.pyplot as plt
 from armen_v2x.utils.geometry import make_tf, apply_tf, rot_z
+from typing import Tuple
 
 
 def show_bev_img():
     pass  # TODO
 
 
-def create_cube_o3d(corners: np.ndarray, color: tuple[float] = None):
+def create_cube_o3d(corners: np.ndarray, color: Tuple[float] = None):
     """
     Create a box to be visualized using open3d. Convention
     forward face: 0 - 1 - 2 - 3, backward face: 4 - 5 - 6 - 7, top face: 0 - 4 - 5 - 1

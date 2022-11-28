@@ -2,6 +2,7 @@ import numpy as np
 import numpy.linalg as LA
 from armen_v2x.utils.typing import *
 from einops import rearrange
+from typing import Tuple
 
 
 def make_tf(translation: Vector, rotation: Union[Vector, Quaternion, np.ndarray]) -> np.ndarray:
@@ -71,7 +72,7 @@ def check_points_in_range(points: np.ndarray, point_cloud_range: np.ndarray) -> 
 
 
 def orthogonal_projection(points: np.ndarray, point_cloud_range: np.ndarray, resolution: float) \
-        -> tuple[np.ndarray, np.ndarray]:
+        -> Tuple[np.ndarray, np.ndarray]:
     """
     Compute points' coordinate in bird-eye view using orthogonal projection.
     :param points: (N, 3[+C]) - x, y, z, [C-dim features]
